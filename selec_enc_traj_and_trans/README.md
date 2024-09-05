@@ -6,4 +6,4 @@ Otherwise you will copy all the tarjectories but most of them will not be encoun
 
 ### Example usage
 
-  1. First step is to identify the encounter trajectories. You go through all the sdamm_complexes and find which are the files with some encountered complexes i.e. which are the files with not onl the starting position. You can use *find_encounter_files.py* fo tha. You should provide the total numer of solutes, the initial part of the encounter complexes file names, all te encounter complexes files.
+  1. First step is to identify the encounter trajectories. You go through all the sdamm_complexes and find which are the files with some encountered complexes i.e. which are the files with not onl the starting position. You can use **find_encounter_files.py** fo tha. You should provide the total numer of solutes, the initial part of the encounter complexes file names, all te encounter complexes files.
