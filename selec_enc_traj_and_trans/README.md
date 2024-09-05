@@ -12,4 +12,8 @@ Otherwise you will copy all the tarjectories but most of them will not be encoun
 
       This programm will give as output a string with all the files "number files" whichh contain a/some encounter complexes inside. You need to copy that string into the bash script (follow Step2).
 
-  2. Once you have the string which tells which are the encounter files with 
+  2. Once you have the string which tells which are the encounter files with a/some encounter complexes inside, you copy that string into the bash script **copy_to_transfer.sh** file. This bash script will create a new directory named **to_transfer** and will copy all the "encounterd" encounter files, trarjectories and input files. Be carefule, you need that the sda input files should end with '.in', otherwise it does not work. You should provide the bash script with the initial part of the names of the encounter_complexes. trajectories and input files.
+
+       $ ./copy_to_transfer.sh sdamm_complexes_ trajectories_ sdamm_crowd_
+
+     Now you have all the files useful for the MSM in the to_transfer file and you can scp only that folder.
