@@ -22,23 +22,6 @@ def printUsage():
 
         Python script to build MSM from xyz files
 
-    ARGUMENTS
-
-        It takes 3 parameters:
-        1.)     Name of sda input file
-        2.)     File/path of the p1_noh.pdb
-        3.)     File/path of the p1_noh.pdb
-        
-
-    EXAMPLE
-
-        python  Create_xyz_encoun_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb
-
-    OUTPUT
-
-        Output files with xyz coordinates of the solute 2 in the reference system of the p1 com are generated in folder_ftrajectories_xyz
-        Output pdb files with xyz coordinates of the solute 2 in the reference system of the p1 com are generated in folder_ftrajectories_vmd: fast way to visualize trajs in vmd
-
     """)
     
 def str2bool(v):
