@@ -54,7 +54,7 @@ if os.path.exists(f"folder_{ftrajectories}_center_sda"):
     shutil.rmtree(f"folder_{ftrajectories}_center_sda")
 os.mkdir(f"folder_{ftrajectories}_center_sda")
 
-for t in range(1,file_num):
+for t in range(1,file_num+1):
     subfile_traj=f"./folder_{ftrajectories}/{ftrajectories}_{t}"
     with open(subfile_traj,"r") as fin:
         lines_fin=fin.readlines()
