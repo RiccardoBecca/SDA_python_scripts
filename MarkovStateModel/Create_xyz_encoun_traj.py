@@ -90,7 +90,7 @@ if os.path.exists(f"folder_{ftrajectories}_xyz"):
 os.mkdir(f"folder_{ftrajectories}_xyz")
 
 
-for t in tqdm(range(1,file_num)):
+for t in tqdm(range(1,file_num+1)):
     subfile_traj=f"./folder_{ftrajectories}/{ftrajectories}_{t}"
     #subfile_traj=f"trajectories_1_{t}"
     with open(subfile_traj,"r") as fin:
@@ -170,7 +170,7 @@ if os.path.exists(f"folder_{ftrajectories}_vmd"):
     shutil.rmtree(f"folder_{ftrajectories}_vmd")
 os.mkdir(f"folder_{ftrajectories}_vmd")
 
-for t in tqdm(range(1,file_num)):
+for t in tqdm(range(1,file_num+1)):
     coordinates = []
     with open(f"folder_{ftrajectories}_xyz/{ftrajectories}_{t}_xyz","r") as fin:
         lines=fin.readlines()
