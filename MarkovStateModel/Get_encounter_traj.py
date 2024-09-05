@@ -91,7 +91,7 @@ with open(fcomplexes,"r") as fin:
     
 #We do not want the first traj also if it is encountered: might be 
 #biased because the strarting point for first traj is not b-surf
-prev_sim=1
+prev_sim=0 # BE CAREFUL
 
 #This is a dictionary with the encount traj num as keys (as it is display in trajectory file)
 #and the first frame which appears in the sdamm_complexes file as argument
@@ -103,7 +103,7 @@ for l,line in enumerate(complexes_lines):
     #if the num of the sim in the line is equal to the previous one
     #it means that the current frame is a continuation of the previous one
     #but we have already found the bound state so we don't care
-    if int(line.split()[0])!= prev_sim:
+    if int(line.split()[0]) != prev_sim and int(line.split()[1])!=0: #second if to avoi initial config
 
         #New encounter traj. Save that traj and this frame which is the first frame
         #if the traj close to the active state
