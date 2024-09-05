@@ -24,3 +24,8 @@ Requirements: sda input file, trajectory file with related fcomplexes file.
     $ python build_MSM.py --folder_xyz folder_trajectories --folder_msm folder_MSM --num_clus 5 --max_iter_kmeans 50000 --list_enc 84 159 190
 
     will look into the folders folder_trajectories_84_xyz, folder_trajectories_159_xyz and folder_trajectories_190_xyz and load the data trajs there to build the MSM. This is intended to be the script where you have multiple folders with data. If you have a single folder with the data you can also use build_MSM_single_folder.py
+
+
+#### Other
+
+Most of the time in SDA you don'ty have a single trajectory file or encounter complex file. If you have multiple traj and encounter traj files which are not ordered, you can use the script **encounter_traj_xyz_vmd.sh** which do the first three steps for a list of encounter files which are specified in the bash script. You just need to change the list of the foor loop providing the correct list. The list can be obtained using the **find_encounter_files.py** in the other folder.
