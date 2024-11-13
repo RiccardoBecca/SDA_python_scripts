@@ -1,6 +1,10 @@
 ### Tools for creating Markov State model from SDA.
 Requirements: sda input file, trajectory file with related fcomplexes file.
 
+#### Selection of number of clusters and lagtime
+
+Use Eigenv_lagtime.ipynb notebook
+
 #### Example usage
 
 1. From trajectory extract encounter trajs by time reversing until com-com distance is over a user-defined cutoff.
