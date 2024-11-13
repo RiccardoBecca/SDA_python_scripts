@@ -3,7 +3,7 @@ Requirements: sda input file, trajectory file with related fcomplexes file.
 
 #### Selection of number of clusters and lagtime
 
-Use Eigenv_lagtime.ipynb notebook
+Use **Eigenv_lagtime.ipynb notebook**
 
 #### Example usage
 
