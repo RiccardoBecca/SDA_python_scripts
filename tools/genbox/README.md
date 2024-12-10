@@ -1,6 +1,7 @@
 Python scripts for computing number of molecules required to target a density, and to compute number of molecules required to match specific density.
 
+#### From box size (A side), molecular weight (Da), target density (g/L) to -> number of molecules
 
-     python build_MSM.py --folder_xyz folder_trajectories --folder_msm folder_MSM --num_clus 5 --max_iter_kmeans 50000 --list_enc 84 159 190
+     python calculate_molecules_cli.py -d 120.0 -m 14000 -b 240
 
-ok
+This tells you number of molecules required. Approximate the number to the next integer.
