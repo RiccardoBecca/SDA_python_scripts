@@ -186,7 +186,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = "Python script to monitor contacts between molecule and crowders from sdamm trajectories",
                                      epilog="Example usage:\n"
                                     "python Monitor_contact.py --sda_input_file sdamm_crowd_1.in --trajectory trajectories_1"
-                                    " --pdb_molecule p2_noh.pdb --pdb_crowders crowder_noh.pdb --mol_number 2 "
+                                    " --pdb_molecule p2_noh.pdb --pdb_crowders crowder_noh.pdb --mol_number 1 "
                                     "--dist_coms 30.0 --contact_dist 4.5 --output_folder crowder_contacts")
     parser.add_argument("--sda_input_file", help = "sda input file name", type=str, required = True)
     parser.add_argument("--trajectory", help = "filename for the trajecotry", type=str, required = True)
