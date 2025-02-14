@@ -18,7 +18,7 @@ for input_file in sdamm_crowd_*.in; do
             --trajectory "$trajectory_file" \
             --pdb_molecule p2_noh.pdb \
             --pdb_crowders crowder_noh.pdb \
-            --mol_number 2 \
+            --mol_number 1 \
             --dist_coms 30.0 \
             --contact_dist 4.5 \
             --output_folder crowder_contacts
