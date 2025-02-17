@@ -31,11 +31,15 @@ Then it is also possible to convert the trajectories in xyz format to make them 
 
     python  Create_xyz_encoun_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb
 
-5. Build Markov State Model.
+### Build Markov State Model
 
-     python build_MSM_single_folder.py --folder_xyz folder_trajectories_1_xyz --folder_msm folder_MSM --num_clus 5 --max_iter_kmeans 50000
+Once you have the xyz trajectory files, it is possible to build the Markov State Models using `build_MSM_single_folder`. This python script makes use of `deeptime` python library
 
-    There are several other self-explaining flags you can check via -h.
+    python build_MSM_single_folder.py --folder_xyz folder_trajectories_1_xyz --folder_msm folder_MSM --num_clus 5 --max_iter_kmeans 50000
+
+There are several other self-explaining flags that can be investigated via 
+
+    python build_MSM_single_folder.py -h
 
 
 #### Other
