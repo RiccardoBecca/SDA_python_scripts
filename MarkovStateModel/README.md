@@ -42,16 +42,22 @@ There are several other self-explaining flags that can be investigated via
     python build_MSM_single_folder.py -h
 
 
-#### Other
+## MSM from multiple trajectories
 
 Most of the time SDA (especially in sdamm) doesn't have a single trajectory file where all the encountered trajectories are stored. If you have multiple encounter trajectory and complexes files which are not ordered, it is possible to use the bash script `encounter_traj_xyz_vmd.sh` which does the initial three steps for a list of encounter files. It is mandatory to specify in the bash script the list of encounter files that should be to analysed.
 
     ./encounter_traj_xyz_vmd.sh
 
-You just need to change the list of the foor loop providing the correct list. The list can be obtained using the **find_encounter_files.py** in the other folder.
+the list of encounter trajectory files can be obtained via the `find_encounter_files.py` python script which can iterate over all complexes files and detect the ones which have a single or multiple encountered complexes. Run it providing the total number of soluter (include protein, ligand and crowders) and the prefix of the complexes file:
 
-Of course now you should provide all the folders to build the MSM. The program **build_MSM.py** builds it and it needs the prefix name of the folder (which should end with "_xyz"), the name for the msm folder where outputs will be saved, the number of clusters to use and a list of integers wich indicates the name of the folders where to take the trajectories. For example
+    python find_encounter_files.py 1107 sdamm_complexes_
 
-     python build_MSM.py --folder_xyz folder_trajectories --folder_msm folder_MSM --num_clus 5 --max_iter_kmeans 50000 --list_enc 84 159 190
+The output is a list of integer which should be copied into `encounter_traj_xyz_vmd.sh`
 
-will look into the folders folder_trajectories_84_xyz, folder_trajectories_159_xyz and folder_trajectories_190_xyz and load the data trajs there to build the MSM. This is intended to be the script where you have multiple folders with data. If you have a single folder with the data you can also use build_MSM_single_folder.py
+Now, it is possible to build a MSM using all those input trajectories together. To do that run:
+
+    python build_MSM.py --folder_xyz folder_trajectories --folder_msm folder_MSM --num_clus 5 --max_iter_kmeans 50000 --list_enc 84 159 190
+
+where `list_enc` is again the list of integers provided by the `find_encounter_files.py` python script which specify the index of the encounter trajectories.
+
+
