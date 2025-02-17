@@ -18,7 +18,7 @@ Use **Validate MSM**
 
      python  Get_encounter_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb 50
 
-    Output files are generated in the folder folder_ftrajectories
+Output files are generated in the folder folder_ftrajectories
 
 3. Python script to write rewrite encounter traj file from sda into new trajs files in sda format in the system of reference of p1_com
     Input: sda input file, also the extract trajectory from step 1 should be there.
