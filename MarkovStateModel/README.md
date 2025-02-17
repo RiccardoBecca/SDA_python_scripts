@@ -61,3 +61,11 @@ Now, it is possible to build a MSM using all those input trajectories together. 
 where `list_enc` is again the list of integers provided by the `find_encounter_files.py` python script which specify the index of the encounter trajectories.
 
 
+#### Other
+
+The repository contains also a bash script to copy the encountered files (trajectory files and respective sda input and complexes files) into a new folder. This might be usefule if the simulations have run on a cluster, and the analysis should run on workstations: instead of remotly copying all the files, only the encounter files should be transfered. To do that, firts run `find_encounter_files.py` to get the list of indexes of the encountered files, copy the list into `copy_to_transfer.sh` file and run
+
+    mkdir to_transfer
+    ./copy_to_transfer sdamm_complexes_ trajectories_ sdamm_crowd_
+
+This will copy the trajectory, complexes and input files with the provided prefixes into the folder `to_transfer`. Then it is possible to copy locally only that specific folder.
