@@ -1,4 +1,4 @@
-# Markov State model from SDA.
+# Markov State Model for SDA.
 
 
 
@@ -7,12 +7,15 @@
 
 Requirements: sda input file, trajectory file with related fcomplexes file.
 
-#### Selection of number of clusters and lagtime
+### Selection of number of clusters and lagtime
 
-Use **Validate MSM**
+In order to determine the number of cluster and lagtime to use for building the MSM, use the `Validate_MSM.py` python script which provides you a Within-Cluster Sum of Squares (WCSS) analysis together with a eigenvalues implied timescale analysis and a Chapman-Kolmogorov Test.
 
-#### Example usage
+    python Validate_MSM.py --folder_prefix folder_trajectories --output_folder validate_folder --list_enc 3 6 16 46 48
 
+### Extracting encouner trajectories from trajectory file
+
+First you need to extract 
  From trajectory extract encounter trajs by time reversing until com-com distance is over a user-defined cutoff.
     Input: sda input file (trajectory file and encounter complexes files should also be there), p1.pdb, p2.pdb and cutoff
 
