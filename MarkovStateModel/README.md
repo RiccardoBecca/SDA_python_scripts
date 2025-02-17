@@ -15,11 +15,9 @@ In order to determine the number of cluster and lagtime to use for building the 
 
 ### Extracting encouner trajectories from trajectory file
 
-First you need to extract 
- From trajectory extract encounter trajs by time reversing until com-com distance is over a user-defined cutoff.
-    Input: sda input file (trajectory file and encounter complexes files should also be there), p1.pdb, p2.pdb and cutoff
+First you need to extract only the encountered trajectory from a trajectory file. The `Get_encounter_traj.py` python scrips extract the encounter trajectories by time reversing closest encounter complexes until com-com distance is over a user-defined cutoff. You can run it via:
 
-     python  Get_encounter_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb 50
+    python  Get_encounter_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb 50
 
 Output files are generated in the folder folder_ftrajectories
 
