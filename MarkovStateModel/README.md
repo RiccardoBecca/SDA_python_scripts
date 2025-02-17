@@ -9,7 +9,7 @@ Requirements: sda input file, trajectory file with related fcomplexes file.
 
 #### Selection of number of clusters and lagtime
 
-Use **Eigenv_lagtime.ipynb notebook**
+Use **Validate MSM**
 
 #### Example usage
 
@@ -23,11 +23,11 @@ Use **Eigenv_lagtime.ipynb notebook**
 2. Python script to write rewrite encounter traj file from sda into new trajs files in sda format in the system of reference of p1_com
     Input: sda input file, also the extract trajectory from step 1 should be there.
 
-   $ python  Create_allign_enco_traj.py sda.in
+    $ python  Create_allign_enco_traj.py sda.in
 
 3. Python script to write xyz file from extracted trajectory from Get_encounter_traj.py script
 
-   $ python  Create_xyz_encoun_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb
+    $ python  Create_xyz_encoun_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb
 
 4. Build Markov State Model.
 
