@@ -13,7 +13,7 @@ In order to determine the number of cluster and lagtime to use for building the 
 
     python Validate_MSM.py --folder_prefix folder_trajectories --output_folder validate_folder --list_enc 3 6 16 46 48
 
-### Extracting encouner trajectories from trajectory file
+### Extracting encountered trajectories from trajectory file
 
 First you need to extract only the encountered trajectory from a trajectory file. The `Get_encounter_traj.py` python scrips extract the encounter trajectories by time reversing closest encounter complexes until com-com distance is over a user-defined cutoff. You can run it via:
 
@@ -21,14 +21,15 @@ First you need to extract only the encountered trajectory from a trajectory file
 
 Output files are generated in the folder folder_ftrajectories
 
-3. Python script to write rewrite encounter traj file from sda into new trajs files in sda format in the system of reference of p1_com
-    Input: sda input file, also the extract trajectory from step 1 should be there.
+### Formatting encounered trajectories
 
-     python  Create_allign_enco_traj.py sda.in
+The previous scripts extract the encountered trajectories in SDA format. First to make all the trajectories consistent between each other, you need to put all of them in the same reference system. To bring all the data in the reference system of the target protein use:
 
-4. Python script to write xyz file from extracted trajectory from Get_encounter_traj.py script
+    python  Create_allign_enco_traj.py sda.in
 
-     python  Create_xyz_encoun_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb
+Then it is also possible to convert the trajectories in xyz format to make them more accessible:
+
+    python  Create_xyz_encoun_traj.py sda.in ../data_grid/p1_noh.pdb ../data_grid/p2_noh.pdb
 
 5. Build Markov State Model.
 
