@@ -44,7 +44,11 @@ There are several other self-explaining flags that can be investigated via
 
 #### Other
 
-Most of the time in SDA you don'ty have a single trajectory file or encounter complex file. If you have multiple traj and encounter traj files which are not ordered, you can use the script **encounter_traj_xyz_vmd.sh** which do the first three steps for a list of encounter files which are specified in the bash script. You just need to change the list of the foor loop providing the correct list. The list can be obtained using the **find_encounter_files.py** in the other folder.
+Most of the time SDA (especially in sdamm) doesn't have a single trajectory file where all the encountered trajectories are stored. If you have multiple encounter trajectory and complexes files which are not ordered, it is possible to use the bash script `encounter_traj_xyz_vmd.sh` which does the initial three steps for a list of encounter files. It is mandatory to specify in the bash script the list of encounter files that should be to analysed.
+
+    ./encounter_traj_xyz_vmd.sh
+
+You just need to change the list of the foor loop providing the correct list. The list can be obtained using the **find_encounter_files.py** in the other folder.
 
 Of course now you should provide all the folders to build the MSM. The program **build_MSM.py** builds it and it needs the prefix name of the folder (which should end with "_xyz"), the name for the msm folder where outputs will be saved, the number of clusters to use and a list of integers wich indicates the name of the folders where to take the trajectories. For example
 
