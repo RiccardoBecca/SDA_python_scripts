@@ -69,3 +69,9 @@ The repository contains also a bash script to copy the encountered files (trajec
     ./copy_to_transfer sdamm_complexes_ trajectories_ sdamm_crowd_
 
 This will copy the trajectory, complexes and input files with the provided prefixes into the folder `to_transfer`. Then it is possible to copy locally only that specific folder.
+
+There are additionally some vmd scripts to upload on vmd the encounter trajectories in order to have an easy way to visualise them:
+
+    vmd -e load.tcl
+
+there are many `load.tcl` vms scripts for different usage.
