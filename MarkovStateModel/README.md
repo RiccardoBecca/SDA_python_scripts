@@ -1,7 +1,8 @@
 ### Tools for creating Markov State model from SDA.
 
 
-![alt text](https://github.com/RiccardoBecca/SDA_python_scripts/blob/main/MarkovStateModel/MSM_trypsin-ben.png?raw=true)
+
+<img src="https://github.com/RiccardoBecca/SDA_python_scripts/blob/main/MarkovStateModel/MSM_trypsin-ben.png?raw=true" alt="alt text" width="400">
 
 
 Requirements: sda input file, trajectory file with related fcomplexes file.
