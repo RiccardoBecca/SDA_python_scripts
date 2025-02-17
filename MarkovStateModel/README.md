@@ -1,4 +1,4 @@
-### Tools for creating Markov State model from SDA.
+# Markov State model from SDA.
 
 
 
