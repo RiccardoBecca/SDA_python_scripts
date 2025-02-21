@@ -1,5 +1,7 @@
 ## Translational diffusion constants
 
+<img src="https://github.com/RiccardoBecca/SDA_python_scripts/blob/main/Hydropro_cluster_diffusion/image.png?raw=true" alt="alt text" width="800">
+
 Thgis repository contains the code to perform back-of-the-envelope calculation (based on hydropro results) for how much the translational diffusion constant would change if the diluted molecule binds to a second molecule i.e. consider the bounded complex as a single bigger molecule
 
 First, given the pdb files of the two molecules, the bounded complexes between the two should be created. This can be done using `construct_molecule.py` script. It takes randomly sample a direction and virtually moves from molecule 1 center of geometry in that direction with step of 1Ang. At each step, it tries to place the second molecule. It checks if there are clashes: if so it continuos moving along the direction, otherwise the bounded complex is retruned in a pdb file. Run:
